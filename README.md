@@ -1,11 +1,26 @@
-# eurovip2000
+# Eurovip 2000
 
+POC di landing page Next.js per un servizio di noleggio con conducente.
+I contenuti sono disponibili in italiano (`/it`) e inglese (`/en`), con selettore
+lingua nell'intestazione. La home (`/`) reindirizza alla versione italiana.
+Le richieste rapide per gli spostamenti da/per Roma aprono WhatsApp con un
+messaggio precompilato nella lingua selezionata.
 
+## Avvio
 
-#vercel
-61125ee9-48cd4388
-aabad92a-159571aa
-92aa4924-fc9d4a83
-dc6b847e-e37d3832
-6bcf4eec-0b343cb9
-57212cd4-341c3db4
+```bash
+npm install
+npm run dev
+```
+
+Apri [http://localhost:3000](http://localhost:3000). Prima della pubblicazione:
+
+- sostituire i numeri segnaposto con dati reali e verificati;
+- aggiungere dominio, recapiti e dati societari ufficiali;
+- verificare le traduzioni e le informazioni su servizi e flotta;
+- collegare il modulo preventivo, che attualmente è solo dimostrativo;
+- pubblicare nomi o loghi dei clienti solo dopo aver verificato autorizzazioni
+  e accordi di riservatezza.
+
+SEO per lingua, URL localizzati, dati strutturati e sitemap sono inclusi nella
+POC.

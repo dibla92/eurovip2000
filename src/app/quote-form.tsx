@@ -1,10 +1,12 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { getTranslations, type Locale } from "./translations";
 
-export default function QuoteForm() {
+export default function QuoteForm({ locale }: { locale: Locale }) {
   const formRef = useRef<HTMLFormElement>(null);
   const [submitted, setSubmitted] = useState(false);
+  const copy = getTranslations(locale).form;
 
   function showDemoConfirmation() {
     if (formRef.current?.reportValidity()) {
@@ -22,11 +24,11 @@ export default function QuoteForm() {
       >
         <div className="form-grid">
           <div className="form-field">
-            <label htmlFor="quote-name">Come ti chiami?</label>
+            <label htmlFor="quote-name">{copy.name}</label>
             <input id="quote-name" autoComplete="name" required />
           </div>
           <div className="form-field">
-            <label htmlFor="quote-email">La tua email</label>
+            <label htmlFor="quote-email">{copy.email}</label>
             <input
               id="quote-email"
               type="email"
@@ -35,7 +37,7 @@ export default function QuoteForm() {
             />
           </div>
           <div className="form-field">
-            <label htmlFor="quote-phone">Telefono (facoltativo)</label>
+            <label htmlFor="quote-phone">{copy.phone}</label>
             <input
               id="quote-phone"
               type="tel"
@@ -44,24 +46,22 @@ export default function QuoteForm() {
             />
           </div>
           <div className="form-field">
-            <label htmlFor="quote-service">Che tipo di viaggio?</label>
+            <label htmlFor="quote-service">{copy.service}</label>
             <select id="quote-service" defaultValue="" required>
               <option value="" disabled>
-                Seleziona un servizio
+                {copy.servicePlaceholder}
               </option>
-              <option>Trasferimento aeroportuale o stazione</option>
-              <option>Viaggio di lavoro</option>
-              <option>Viaggio privato</option>
-              <option>Evento o servizio dedicato</option>
-              <option>Altro</option>
+              {copy.serviceOptions.map((option) => (
+                <option key={option}>{option}</option>
+              ))}
             </select>
           </div>
           <div className="form-field">
-            <label htmlFor="quote-origin">Da dove parti?</label>
+            <label htmlFor="quote-origin">{copy.origin}</label>
             <input id="quote-origin" autoComplete="address-level2" required />
           </div>
           <div className="form-field">
-            <label htmlFor="quote-destination">Dove vuoi arrivare?</label>
+            <label htmlFor="quote-destination">{copy.destination}</label>
             <input
               id="quote-destination"
               autoComplete="address-level2"
@@ -69,17 +69,17 @@ export default function QuoteForm() {
             />
           </div>
           <div className="form-field form-field-wide">
-            <label htmlFor="quote-date">Quando?</label>
+            <label htmlFor="quote-date">{copy.date}</label>
             <input id="quote-date" type="date" required />
           </div>
           <div className="form-field form-field-wide">
             <label htmlFor="quote-details">
-              Qualche dettaglio in più? (facoltativo)
+              {copy.details}
             </label>
             <textarea
               id="quote-details"
               rows={3}
-              placeholder="Passeggeri, bagagli, orari o tappe intermedie..."
+              placeholder={copy.detailsPlaceholder}
             />
           </div>
         </div>
@@ -88,16 +88,14 @@ export default function QuoteForm() {
           type="button"
           onClick={showDemoConfirmation}
         >
-          Prepara la richiesta <span aria-hidden="true">↗</span>
+          {copy.submit} <span aria-hidden="true">↗</span>
         </button>
         <p className="form-demo-note" id="quote-demo-note">
-          Modulo dimostrativo: i dati inseriti non vengono inviati né salvati.
+          {copy.demoNote}
         </p>
         {submitted && (
           <p className="form-confirmation" role="status">
-            La richiesta è stata verificata solo in questa anteprima. Nessun dato
-            è stato inviato: il modulo sarà collegato ai contatti ufficiali in
-            una fase successiva.
+            {copy.confirmation}
           </p>
         )}
       </form>
