@@ -90,6 +90,7 @@ export default function Home() {
           </a>
           <nav className="main-nav" aria-label="Navigazione principale">
             <a href="#chi-siamo">Chi siamo</a>
+            <a href="#esperienza">Esperienza</a>
             <a href="#flotta">La flotta</a>
             <a href="#servizi">Servizi</a>
             <a href="#faq">FAQ</a>
@@ -189,6 +190,75 @@ export default function Home() {
                 className="intro-image"
               />
               <span className="image-note">Immagine di repertorio</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          className="experience-section section-pad"
+          id="esperienza"
+          aria-labelledby="experience-title"
+        >
+          <div className="page-width">
+            <div className="experience-heading">
+              <div>
+                <p className="eyebrow eyebrow-olive">
+                  Esperienza, fiducia, discrezione
+                </p>
+                <h2 id="experience-title">
+                  La fiducia si misura
+                  <br />
+                  <em>nel tempo.</em>
+                </h2>
+              </div>
+              <p>
+                Ogni viaggio è un impegno: ascoltare le esigenze, coordinare il
+                servizio e accompagnare persone e aziende con attenzione. Una
+                responsabilità che si rafforza esperienza dopo esperienza.
+              </p>
+            </div>
+            <div className="experience-grid">
+              <div>
+                <div className="experience-metrics">
+                  <article className="metric-card">
+                    <span className="metric-value">XX+</span>
+                    <h3>Anni di esperienza NCC</h3>
+                  </article>
+                  <article className="metric-card">
+                    <span className="metric-value">XX+</span>
+                    <h3>Viaggi coordinati</h3>
+                  </article>
+                  <article className="metric-card">
+                    <span className="metric-value">XX+</span>
+                    <h3>Clienti business</h3>
+                  </article>
+                </div>
+                <p className="metric-note">
+                  Numeri segnaposto da sostituire con dati aziendali aggiornati
+                  e verificabili prima della pubblicazione.
+                </p>
+              </div>
+              <article className="client-note">
+                <p className="eyebrow eyebrow-light">
+                  Collaborazioni riservate
+                </p>
+                <h3>
+                  Al fianco di realtà
+                  <br />
+                  <em>di prestigio.</em>
+                </h3>
+                <p>
+                  Eurovip 2000 ha maturato esperienze con clienti e brand di
+                  alto profilo. Per rispetto della riservatezza, in questa
+                  presentazione non pubblichiamo nomi o loghi: eventuali
+                  riferimenti saranno aggiunti solo dopo aver verificato
+                  accordi e autorizzazioni.
+                </p>
+                <a className="text-link text-link-light" href="#preventivo">
+                  Un servizio per la tua azienda{" "}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </article>
             </div>
           </div>
         </section>
@@ -431,6 +501,32 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/393924044611"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Apri la chat WhatsApp con Eurovip 2000 al numero +39 392 404 4611"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 32 32"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M26.2 5.7A14.3 14.3 0 0 0 3.7 22.9L2 30l7.3-1.9A14.3 14.3 0 0 0 26.2 5.7Z"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11.5 9.7c-.4-.9-.8-.9-1.2-.9h-1c-.4 0-.9.2-1.3.7-.5.5-1.7 1.7-1.7 4.1 0 2.4 1.8 4.7 2 5 .3.3 3.5 5.5 8.6 7.5 4.2 1.7 5 .9 5.9.9.9-.1 2.9-1.2 3.3-2.4.4-1.2.4-2.2.3-2.4-.2-.2-.5-.3-1-.6s-2.9-1.4-3.3-1.5c-.4-.2-.8-.3-1.1.3-.4.5-1.3 1.5-1.6 1.8-.3.4-.6.4-1.1.1-.5-.2-2-1-3.8-2.5a14.3 14.3 0 0 1-2.6-3.3c-.3-.5 0-.8.2-1.1l.8-.9c.2-.3.3-.5.5-.8.1-.3 0-.6-.1-.9l-1.8-4Z"
+            fill="currentColor"
+            transform="translate(1 0) scale(.9)"
+          />
+        </svg>
+      </a>
     </>
   );
 }

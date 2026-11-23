@@ -95,6 +95,35 @@ textarea:focus-visible {
   transform: translateY(0);
 }
 
+.whatsapp-float {
+  position: fixed;
+  z-index: 30;
+  right: calc(22px + env(safe-area-inset-right));
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  display: grid;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.22);
+  place-items: center;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.whatsapp-float svg {
+  width: 29px;
+  height: 29px;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 26px rgba(0, 0, 0, 0.28);
+}
+
 .site-header {
   position: relative;
   z-index: 10;
@@ -244,6 +273,7 @@ textarea:focus-visible {
 
 .hero h1,
 .intro-copy h2,
+.experience-heading h2,
 .fleet-heading h2,
 .section-heading h2,
 .national-copy h2,
@@ -265,6 +295,7 @@ textarea:focus-visible {
 
 .hero h1 em,
 .intro-copy h2 em,
+.experience-heading h2 em,
 .fleet-heading h2 em,
 .section-heading h2 em,
 .national-copy h2 em,
@@ -413,6 +444,7 @@ textarea:focus-visible {
 }
 
 .intro-copy h2,
+.experience-heading h2,
 .fleet-heading h2,
 .section-heading h2,
 .national-copy h2,
@@ -425,6 +457,7 @@ textarea:focus-visible {
 }
 
 .intro-copy h2 em,
+.experience-heading h2 em,
 .section-heading h2 em,
 .steps-intro h2 em,
 .faq-layout h2 em {
@@ -473,6 +506,107 @@ textarea:focus-visible {
   font-size: 9px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.experience-section {
+  background: var(--sand);
+}
+
+.experience-heading {
+  display: grid;
+  margin-bottom: 43px;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: end;
+  gap: 48px;
+}
+
+.experience-heading > p {
+  max-width: 430px;
+  margin: 0;
+  color: #696e65;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+}
+
+.experience-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric-card {
+  display: flex;
+  min-height: 180px;
+  padding: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(23, 35, 31, 0.16);
+  background: var(--paper-light);
+}
+
+.metric-value {
+  color: var(--forest);
+  font-family: var(--serif);
+  font-size: clamp(38px, 4vw, 55px);
+  line-height: 1;
+}
+
+.metric-card h3 {
+  max-width: 130px;
+  margin: 18px 0 0;
+  color: #5e655c;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.metric-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.client-note {
+  display: flex;
+  min-height: 220px;
+  padding: 31px;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--paper-light);
+  background: var(--forest);
+}
+
+.client-note h3 {
+  margin: 20px 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.client-note h3 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.client-note > p:not(.eyebrow) {
+  margin: 0 0 21px;
+  color: rgba(250, 248, 242, 0.7);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.client-note .text-link {
+  margin-top: auto;
 }
 
 .fleet-section {
@@ -1061,6 +1195,10 @@ textarea:focus-visible {
     height: 280px;
   }
 
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
   .services-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1196,6 +1334,7 @@ textarea:focus-visible {
   }
 
   .intro-copy h2,
+  .experience-heading h2,
   .fleet-heading h2,
   .section-heading h2,
   .national-copy h2,
@@ -1219,6 +1358,44 @@ textarea:focus-visible {
 
   .intro-image {
     height: 280px;
+  }
+
+  .experience-heading {
+    margin-bottom: 27px;
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .experience-metrics {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .metric-card {
+    min-height: 0;
+    padding: 17px 19px;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .metric-value {
+    font-size: 42px;
+  }
+
+  .metric-card h3 {
+    max-width: 150px;
+    margin: 0;
+    text-align: right;
+  }
+
+  .metric-note {
+    margin-bottom: 21px;
+  }
+
+  .client-note {
+    min-height: 0;
+    padding: 25px 22px;
   }
 
   .fleet-heading,
@@ -1359,6 +1536,13 @@ textarea:focus-visible {
 
   .hero-actions .button {
     width: 100%;
+  }
+
+  .whatsapp-float {
+    right: calc(16px + env(safe-area-inset-right));
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    width: 56px;
+    height: 56px;
   }
 }
 
