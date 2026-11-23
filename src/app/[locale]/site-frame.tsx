@@ -73,6 +73,7 @@ export default function SiteFrame({
       </footer>
       <WhatsAppWidget
         chatLabel={t.whatsappLabel}
+        message={t.whatsappMessage}
         closeLabel={t.whatsappClose}
         reopenLabel={t.whatsappReopen}
       />

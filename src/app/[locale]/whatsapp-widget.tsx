@@ -4,10 +4,12 @@ import { useState } from "react";
 
 export default function WhatsAppWidget({
   chatLabel,
+  message,
   closeLabel,
   reopenLabel,
 }: {
   chatLabel: string;
+  message: string;
   closeLabel: string;
   reopenLabel: string;
 }) {
@@ -41,7 +43,7 @@ export default function WhatsAppWidget({
       </button>
       <a
         className="whatsapp-float"
-        href="https://wa.me/393924044611"
+        href={`https://wa.me/393924044611?text=${encodeURIComponent(message)}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={chatLabel}

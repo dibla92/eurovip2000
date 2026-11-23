@@ -409,6 +409,8 @@ const translations = {
     backToTop: "Torna all'inizio ↑",
     whatsappLabel:
       "Apri la chat WhatsApp con Eurovip 2000 al numero +39 392 404 4611",
+    whatsappMessage:
+      "Ciao, vorrei ricevere informazioni sui vostri servizi.",
     whatsappClose: "Nascondi il pulsante WhatsApp",
     whatsappReopen: "Mostra il pulsante WhatsApp",
     form: {
@@ -839,6 +841,8 @@ const translations = {
     backToTop: "Back to top ↑",
     whatsappLabel:
       "Open a WhatsApp chat with Eurovip 2000 at +39 392 404 4611",
+    whatsappMessage:
+      "Hello, I would like to get information about your services.",
     whatsappClose: "Hide the WhatsApp button",
     whatsappReopen: "Show the WhatsApp button",
     form: {
