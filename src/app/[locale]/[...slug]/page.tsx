@@ -158,7 +158,7 @@ function AboutPage({ locale }: { locale: Locale }) {
 
   return (
     <main id="contenuto">
-      <section className="intro-section section-pad">
+      <section className="intro-section section-pad" id="chi-siamo">
         <div className="page-width intro-grid">
           <div className="section-label">
             <span className="eyebrow">{t.aboutPageEyebrow}</span>

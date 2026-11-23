@@ -12,7 +12,6 @@ const translations = {
     nav: {
       home: "Home",
       about: "Chi siamo",
-      experience: "Esperienza",
       fleet: "La flotta",
       services: "Servizi",
       faq: "FAQ",
@@ -82,15 +81,11 @@ const translations = {
         },
       },
     },
-    homeIntro:
-      "Eurovip 2000 è una società NCC per viaggi privati e di lavoro in Italia. Itinerario e dettagli si definiscono insieme, secondo le tue esigenze.",
-    homeAboutLink: "Scopri la nostra esperienza",
     homeServicesTitle: "Un servizio per|ogni itinerario.",
     homeTransfersTitle: "Parti da Roma?",
     homeTransfersIntro:
       "Scegli una tratta per scoprire i dettagli e inviare la tua richiesta su WhatsApp.",
     homeAllServices: "Tutti i servizi",
-    homeAboutTitle: "Un servizio attento|alle tue esigenze.",
     homeQuoteLink: "Parliamo del tuo viaggio",
     aboutPageEyebrow: "Chi siamo · Esperienza",
     aboutPageTitle: "Un viaggio ben organizzato|comincia dall'ascolto.",
@@ -224,7 +219,6 @@ const translations = {
     heroNotesLabel: "Informazioni sul servizio",
     heroNotes: ["Per privati e aziende", "Viaggi in Italia", "Preventivo gratuito"],
     heroCaption: "La tua prossima destinazione",
-    aboutLabel: "01 / Chi siamo",
     aboutEyebrow: "Eurovip 2000 · NCC",
     aboutTitle: "Il tempo del viaggio|torna a essere tuo.",
     aboutCopy: [
@@ -451,7 +445,6 @@ const translations = {
     nav: {
       home: "Home",
       about: "About us",
-      experience: "Experience",
       fleet: "Our fleet",
       services: "Services",
       faq: "FAQ",
@@ -521,15 +514,11 @@ const translations = {
         },
       },
     },
-    homeIntro:
-      "Eurovip 2000 is a private chauffeur company for business and leisure travel in Italy. We plan each itinerary together around your needs.",
-    homeAboutLink: "Discover our experience",
     homeServicesTitle: "A service for|every journey.",
     homeTransfersTitle: "Travelling to or from Rome?",
     homeTransfersIntro:
       "Choose a route to explore the details and send your enquiry on WhatsApp.",
     homeAllServices: "Explore all services",
-    homeAboutTitle: "A service shaped|around your needs.",
     homeQuoteLink: "Tell us about your journey",
     aboutPageEyebrow: "About us · Experience",
     aboutPageTitle: "A well-planned journey|starts with listening.",
@@ -663,7 +652,6 @@ const translations = {
     heroNotesLabel: "Service information",
     heroNotes: ["For individuals and businesses", "Travel across Italy", "Free quote"],
     heroCaption: "Your next destination",
-    aboutLabel: "01 / About us",
     aboutEyebrow: "Eurovip 2000 · Chauffeur service",
     aboutTitle: "Make travel time|your own again.",
     aboutCopy: [

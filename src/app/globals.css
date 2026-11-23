@@ -248,23 +248,6 @@ textarea:focus-visible {
   font-size: 12px;
 }
 
-.nav-home-group,
-.nav-home-sections {
-  display: flex;
-  align-items: center;
-}
-
-.nav-home-group {
-  gap: 12px;
-}
-
-.nav-home-sections {
-  padding-left: 12px;
-  border-left: 1px solid var(--gold);
-  gap: 14px;
-  font-size: 11px;
-}
-
 .main-nav a,
 .footer-bottom a {
   transition: color 160ms ease;
@@ -1800,11 +1783,6 @@ a.contact-card:hover {
   }
 
   .main-nav a {
-    flex: 0 0 auto;
-  }
-
-  .nav-home-group,
-  .nav-home-sections {
     flex: 0 0 auto;
   }
 

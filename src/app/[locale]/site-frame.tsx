@@ -35,8 +35,7 @@ export default function SiteFrame({
         }}
         paths={{
           home: homePath,
-          about: `${homePath}#chi-siamo`,
-          experience: `${homePath}#esperienza`,
+          about: getLocalizedPath(locale, "about"),
           fleet: getLocalizedPath(locale, "fleet"),
           services: getLocalizedPath(locale, "services"),
           faq: getLocalizedPath(locale, "faq"),
