@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import type { PageKey } from "../site-routing";
 import type { Locale } from "../translations";
 
 type HeaderCopy = {
@@ -21,10 +22,12 @@ type HeaderCopy = {
 
 export default function SiteHeader({
   locale,
+  page,
   copy,
   paths,
 }: {
   locale: Locale;
+  page: PageKey;
   copy: HeaderCopy;
   paths: {
     home: string;
@@ -41,6 +44,17 @@ export default function SiteHeader({
 }) {
   const headerRef = useRef<HTMLElement>(null);
   const [hidden, setHidden] = useState(false);
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    function updateHash() {
+      setHash(window.location.hash);
+    }
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
 
   useEffect(() => {
     let previousY = window.scrollY;
@@ -65,6 +79,21 @@ export default function SiteHeader({
     return () => window.removeEventListener("scroll", updateVisibility);
   }, []);
 
+  const activeNavItem =
+    page === "about"
+      ? hash === "#esperienza"
+        ? "experience"
+        : "about"
+      : page === "fleet"
+        ? "fleet"
+        : page === "services" || page.startsWith("transfer:")
+          ? "services"
+          : page === "faq"
+            ? "faq"
+            : page === "contacts"
+              ? "contacts"
+              : null;
+
   return (
     <header
       className="site-header"
@@ -81,12 +110,33 @@ export default function SiteHeader({
           </span>
         </a>
         <nav className="main-nav" aria-label={copy.navLabel}>
-          <a href={paths.about}>{copy.nav.about}</a>
-          <a href={paths.experience}>{copy.nav.experience}</a>
-          <a href={paths.fleet}>{copy.nav.fleet}</a>
-          <a href={paths.services}>{copy.nav.services}</a>
-          <a href={paths.faq}>{copy.nav.faq}</a>
-          <a href={paths.contacts}>{copy.nav.contacts}</a>
+          <a href={paths.about} aria-current={activeNavItem === "about" ? "page" : undefined}>
+            {copy.nav.about}
+          </a>
+          <a
+            href={paths.experience}
+            aria-current={activeNavItem === "experience" ? "location" : undefined}
+          >
+            {copy.nav.experience}
+          </a>
+          <a href={paths.fleet} aria-current={activeNavItem === "fleet" ? "page" : undefined}>
+            {copy.nav.fleet}
+          </a>
+          <a
+            href={paths.services}
+            aria-current={activeNavItem === "services" ? "page" : undefined}
+          >
+            {copy.nav.services}
+          </a>
+          <a href={paths.faq} aria-current={activeNavItem === "faq" ? "page" : undefined}>
+            {copy.nav.faq}
+          </a>
+          <a
+            href={paths.contacts}
+            aria-current={activeNavItem === "contacts" ? "page" : undefined}
+          >
+            {copy.nav.contacts}
+          </a>
         </nav>
         <div className="header-actions">
           <nav className="language-switch" aria-label={copy.languageLabel}>

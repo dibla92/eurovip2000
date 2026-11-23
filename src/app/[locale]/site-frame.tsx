@@ -25,6 +25,7 @@ export default function SiteFrame({
       </a>
       <SiteHeader
         locale={locale}
+        page={page}
         copy={{
           homeLabel: t.homeLabel,
           navLabel: t.navLabel,

@@ -254,8 +254,17 @@ textarea:focus-visible {
 }
 
 .main-nav a:hover,
+.main-nav a[aria-current="page"],
+.main-nav a[aria-current="location"],
 .footer-bottom a:hover {
   color: var(--olive);
+}
+
+.main-nav a[aria-current="page"],
+.main-nav a[aria-current="location"] {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 6px;
 }
 
 .header-cta {
