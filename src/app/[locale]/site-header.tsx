@@ -9,6 +9,7 @@ type HeaderCopy = {
   homeLabel: string;
   navLabel: string;
   nav: {
+    home: string;
     about: string;
     experience: string;
     fleet: string;
@@ -80,10 +81,12 @@ export default function SiteHeader({
   }, []);
 
   const activeNavItem =
-    page === "about"
+    page === "about" || (page === "home" && hash === "#chi-siamo")
       ? hash === "#esperienza"
         ? "experience"
         : "about"
+      : page === "home" && hash === "#esperienza"
+        ? "experience"
       : page === "fleet"
         ? "fleet"
         : page === "services" || page.startsWith("transfer:")
@@ -110,15 +113,23 @@ export default function SiteHeader({
           </span>
         </a>
         <nav className="main-nav" aria-label={copy.navLabel}>
-          <a href={paths.about} aria-current={activeNavItem === "about" ? "page" : undefined}>
-            {copy.nav.about}
-          </a>
-          <a
-            href={paths.experience}
-            aria-current={activeNavItem === "experience" ? "location" : undefined}
-          >
-            {copy.nav.experience}
-          </a>
+          <div className="nav-home-group">
+            <a href={paths.home}>{copy.nav.home}</a>
+            <div className="nav-home-sections">
+              <a
+                href={paths.about}
+                aria-current={activeNavItem === "about" ? "location" : undefined}
+              >
+                {copy.nav.about}
+              </a>
+              <a
+                href={paths.experience}
+                aria-current={activeNavItem === "experience" ? "location" : undefined}
+              >
+                {copy.nav.experience}
+              </a>
+            </div>
+          </div>
           <a href={paths.fleet} aria-current={activeNavItem === "fleet" ? "page" : undefined}>
             {copy.nav.fleet}
           </a>

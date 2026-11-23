@@ -15,8 +15,8 @@ export default function SiteFrame({
 }) {
   const t = getTranslations(locale);
   const quotePath = getLocalizedPath(locale, "quote");
-  const aboutPath = getLocalizedPath(locale, "about");
   const contactsPath = getLocalizedPath(locale, "contacts");
+  const homePath = getLocalizedPath(locale, "home");
 
   return (
     <>
@@ -34,9 +34,9 @@ export default function SiteFrame({
           quoteCta: t.quoteCta,
         }}
         paths={{
-          home: getLocalizedPath(locale, "home"),
-          about: aboutPath,
-          experience: `${aboutPath}#esperienza`,
+          home: homePath,
+          about: `${homePath}#chi-siamo`,
+          experience: `${homePath}#esperienza`,
           fleet: getLocalizedPath(locale, "fleet"),
           services: getLocalizedPath(locale, "services"),
           faq: getLocalizedPath(locale, "faq"),

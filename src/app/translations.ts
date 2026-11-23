@@ -10,6 +10,7 @@ const translations = {
     homeLabel: "Eurovip 2000, home",
     navLabel: "Navigazione principale",
     nav: {
+      home: "Home",
       about: "Chi siamo",
       experience: "Esperienza",
       fleet: "La flotta",
@@ -82,8 +83,8 @@ const translations = {
       },
     },
     homeIntro:
-      "Servizi di noleggio con conducente per privati e aziende, con itinerari da concordare in Italia.",
-    homeAboutLink: "Scopri Eurovip 2000",
+      "Eurovip 2000 è una società NCC per viaggi privati e di lavoro in Italia. Itinerario e dettagli si definiscono insieme, secondo le tue esigenze.",
+    homeAboutLink: "Scopri la nostra esperienza",
     homeServicesTitle: "Un servizio per|ogni itinerario.",
     homeTransfersTitle: "Parti da Roma?",
     homeTransfersIntro:
@@ -236,7 +237,7 @@ const translations = {
     experienceEyebrow: "Esperienza, fiducia, discrezione",
     experienceTitle: "La fiducia si misura|nel tempo.",
     experienceIntro:
-      "Ogni viaggio è un impegno: ascoltare le esigenze, coordinare il servizio e accompagnare persone e aziende con attenzione. Una responsabilità che si rafforza esperienza dopo esperienza.",
+      "Ascoltiamo le esigenze, coordiniamo il servizio e accompagniamo persone e aziende con attenzione, in ogni viaggio.",
     metrics: [
       "Anni di esperienza NCC",
       "Viaggi coordinati",
@@ -247,7 +248,7 @@ const translations = {
     clientEyebrow: "Collaborazioni riservate",
     clientTitle: "Al fianco di realtà|di prestigio.",
     clientCopy:
-      "Eurovip 2000 ha maturato esperienze con clienti e brand di alto profilo. Per rispetto della riservatezza, in questa presentazione non pubblichiamo nomi o loghi: eventuali riferimenti saranno aggiunti solo dopo aver verificato accordi e autorizzazioni.",
+      "Eurovip 2000 ha collaborato con clienti e brand di alto profilo. Nel rispetto della riservatezza, i nomi vengono condivisi solo con autorizzazione.",
     businessLink: "Un servizio per la tua azienda",
     fleetLabel: "02 / La nostra flotta",
     fleetTitle: "Lo spazio giusto|per il tuo viaggio.",
@@ -446,6 +447,7 @@ const translations = {
     homeLabel: "Eurovip 2000, home",
     navLabel: "Main navigation",
     nav: {
+      home: "Home",
       about: "About us",
       experience: "Experience",
       fleet: "Our fleet",
@@ -518,8 +520,8 @@ const translations = {
       },
     },
     homeIntro:
-      "Private chauffeur services for individuals and businesses, with journeys arranged across Italy.",
-    homeAboutLink: "Discover Eurovip 2000",
+      "Eurovip 2000 is a private chauffeur company for business and leisure travel in Italy. We plan each itinerary together around your needs.",
+    homeAboutLink: "Discover our experience",
     homeServicesTitle: "A service for|every journey.",
     homeTransfersTitle: "Travelling to or from Rome?",
     homeTransfersIntro:
@@ -672,14 +674,14 @@ const translations = {
     experienceEyebrow: "Experience, trust, discretion",
     experienceTitle: "Trust is built|over time.",
     experienceIntro:
-      "Every journey is a commitment: listening to your needs, coordinating the service and looking after people and businesses. It is a responsibility strengthened with every experience.",
+      "We listen to your needs, coordinate the service and look after individuals and businesses on every journey.",
     metrics: ["Years of NCC experience", "Journeys coordinated", "Business clients"],
     metricNote:
       "Placeholder figures: replace these with current, verifiable company data before publishing.",
     clientEyebrow: "Confidential partnerships",
     clientTitle: "Working alongside|leading names.",
     clientCopy:
-      "Eurovip 2000 has experience working with high-profile clients and brands. Out of respect for confidentiality, we do not publish names or logos here. Any references will only be added after permissions and agreements have been confirmed.",
+      "Eurovip 2000 has worked with high-profile clients and brands. In respect of confidentiality, names are shared only with permission.",
     businessLink: "A service for your business",
     fleetLabel: "02 / Our fleet",
     fleetTitle: "The right space|for your journey.",
