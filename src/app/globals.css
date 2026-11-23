@@ -95,14 +95,19 @@ textarea:focus-visible {
   transform: translateY(0);
 }
 
-.whatsapp-float {
+.whatsapp-widget {
   position: fixed;
-  z-index: 30;
+  z-index: 50;
   right: calc(22px + env(safe-area-inset-right));
   bottom: calc(22px + env(safe-area-inset-bottom));
+  width: 56px;
+  height: 56px;
+}
+
+.whatsapp-float {
   display: grid;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 56px;
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   color: #fff;
@@ -114,9 +119,67 @@ textarea:focus-visible {
     box-shadow 160ms ease;
 }
 
+.whatsapp-close {
+  position: absolute;
+  z-index: 1;
+  top: -9px;
+  right: -9px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #fff;
+  background: #303832;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  place-items: center;
+}
+
+.whatsapp-close span {
+  margin-top: -2px;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.whatsapp-tab {
+  position: fixed;
+  z-index: 50;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  left: calc(22px + env(safe-area-inset-left));
+  display: inline-flex;
+  min-height: 42px;
+  padding: 0 15px;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  color: #fff;
+  background: #20342e;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.whatsapp-tab:hover {
+  transform: translateY(-2px);
+  background: #182923;
+}
+
+.whatsapp-tab-icon {
+  color: #8be0a4;
+  font-size: 15px;
+}
+
 .whatsapp-float svg {
-  width: 29px;
-  height: 29px;
+  width: 27px;
+  height: 27px;
 }
 
 .whatsapp-float:hover {
@@ -1361,6 +1424,17 @@ textarea:focus-visible {
     scroll-padding-top: 128px;
   }
 
+  .whatsapp-widget,
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float svg {
+    width: 25px;
+    height: 25px;
+  }
+
   .page-width,
   .header-inner {
     width: calc(100% - 40px);
@@ -1697,11 +1771,14 @@ textarea:focus-visible {
     width: 100%;
   }
 
-  .whatsapp-float {
+  .whatsapp-widget {
     right: calc(16px + env(safe-area-inset-right));
     bottom: calc(16px + env(safe-area-inset-bottom));
-    width: 56px;
-    height: 56px;
+  }
+
+  .whatsapp-tab {
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    left: calc(16px + env(safe-area-inset-left));
   }
 }
 
