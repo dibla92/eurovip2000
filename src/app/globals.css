@@ -146,18 +146,18 @@ textarea:focus-visible {
 .whatsapp-tab {
   position: fixed;
   z-index: 50;
-  bottom: calc(22px + env(safe-area-inset-bottom));
-  left: calc(22px + env(safe-area-inset-left));
+  right: calc(16px + env(safe-area-inset-right));
+  bottom: 0;
   display: inline-flex;
-  min-height: 42px;
-  padding: 0 15px;
+  min-height: 36px;
+  padding: 8px 14px calc(8px + env(safe-area-inset-bottom));
   align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 3px;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px 8px 0 0;
   color: #fff;
-  background: #20342e;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+  background: #16803c;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
   cursor: pointer;
   font-size: 11px;
   font-weight: 700;
@@ -169,12 +169,12 @@ textarea:focus-visible {
 
 .whatsapp-tab:hover {
   transform: translateY(-2px);
-  background: #182923;
+  background: #126b32;
 }
 
 .whatsapp-tab-icon {
-  color: #8be0a4;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1;
 }
 
 .whatsapp-float svg {
@@ -2074,8 +2074,7 @@ a.contact-card:hover {
   }
 
   .whatsapp-tab {
-    bottom: calc(16px + env(safe-area-inset-bottom));
-    left: calc(16px + env(safe-area-inset-left));
+    right: calc(12px + env(safe-area-inset-right));
   }
 }
 

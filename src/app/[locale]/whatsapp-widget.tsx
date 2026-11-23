@@ -25,7 +25,7 @@ export default function WhatsAppWidget({
       >
         <span aria-hidden="true">WhatsApp</span>
         <span className="whatsapp-tab-icon" aria-hidden="true">
-          ↗
+          ↑
         </span>
       </button>
     );
