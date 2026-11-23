@@ -174,7 +174,7 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
           </div>
         </section>
 
-        <section className="services-section section-pad">
+        <section className="services-section home-services-section section-pad">
           <div className="page-width">
             <div className="section-heading">
               <div>
@@ -225,9 +225,9 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                   <span className="transfer-number">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="transfer-arrow" aria-hidden="true">
+                  {/* <span className="transfer-arrow" aria-hidden="true">
                     ↗
-                  </span>
+                  </span> */}
                   <h3>{transfer.title}</h3>
                   <p>{transfer.description}</p>
                   <span className="transfer-cta">

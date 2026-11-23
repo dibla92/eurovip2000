@@ -948,6 +948,19 @@ textarea:focus-visible {
   background: var(--paper);
 }
 
+.home-services-section {
+  padding-block: 96px;
+}
+
+.home-services-section .section-heading {
+  margin-bottom: 42px;
+}
+
+.home-services-section .section-heading h2 {
+  margin-top: 16px;
+  font-size: clamp(38px, 4.2vw, 58px);
+}
+
 .transfers-section {
   background: var(--paper-light);
 }
@@ -1930,6 +1943,20 @@ a.contact-card:hover {
     align-items: flex-start;
     flex-direction: column;
     gap: 18px;
+  }
+
+  .home-services-section {
+    padding-block: 62px;
+  }
+
+  .home-services-section .section-heading {
+    margin-bottom: 27px;
+    gap: 12px;
+  }
+
+  .home-services-section .section-heading h2 {
+    margin-top: 14px;
+    font-size: clamp(36px, 9vw, 46px);
   }
 
   .fleet-grid {
