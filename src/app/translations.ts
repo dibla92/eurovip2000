@@ -15,11 +15,203 @@ const translations = {
       fleet: "La flotta",
       services: "Servizi",
       faq: "FAQ",
+      contacts: "Contatti",
+    },
+    pageMeta: {
+      about: {
+        title: "Chi siamo | Eurovip 2000",
+        description:
+          "Scopri Eurovip 2000, società di noleggio con conducente per viaggi privati e di lavoro in Italia.",
+      },
+      fleet: {
+        title: "Flotta NCC | Eurovip 2000",
+        description:
+          "Scopri le categorie di veicoli indicative per i servizi NCC Eurovip 2000. Capienza e disponibilità sono da confermare.",
+      },
+      services: {
+        title: "Servizi NCC in Italia | Eurovip 2000",
+        description:
+          "Transfer aeroportuali, viaggi business, spostamenti da Roma e autista a disposizione. Scopri i servizi NCC Eurovip 2000.",
+      },
+      contacts: {
+        title: "Contatti | Eurovip 2000",
+        description:
+          "Contatta Eurovip 2000 per informazioni sui servizi di noleggio con conducente e per richiedere un preventivo gratuito.",
+      },
+      quote: {
+        title: "Richiedi un preventivo NCC | Eurovip 2000",
+        description:
+          "Raccontaci il tuo itinerario e richiedi un preventivo gratuito per un servizio di noleggio con conducente.",
+      },
+      faq: {
+        title: "Domande frequenti | Eurovip 2000",
+        description:
+          "Risposte alle domande frequenti sui servizi NCC Eurovip 2000, le richieste di preventivo e i viaggi in Italia.",
+      },
+      transfers: {
+        fiumicino: {
+          title: "Transfer da e per Fiumicino | Eurovip 2000",
+          description:
+            "Richiedi informazioni per un transfer NCC da o per l'aeroporto di Roma Fiumicino. Itinerario e dettagli da concordare.",
+        },
+        ciampino: {
+          title: "Transfer da e per Ciampino | Eurovip 2000",
+          description:
+            "Richiedi informazioni per un transfer NCC da o per l'aeroporto di Roma Ciampino. Itinerario e dettagli da concordare.",
+        },
+        civitavecchia: {
+          title: "Transfer porto di Civitavecchia | Eurovip 2000",
+          description:
+            "Informazioni per un transfer NCC da o per il porto di Civitavecchia, con partenza e destinazione da concordare.",
+        },
+        rome: {
+          title: "Transfer NCC a Roma | Eurovip 2000",
+          description:
+            "Richiedi un transfer NCC all'interno di Roma: indicaci indirizzi, data e orario per valutare il servizio.",
+        },
+        "beyond-rome": {
+          title: "Transfer da Roma verso altre città | Eurovip 2000",
+          description:
+            "Servizio NCC da Roma verso altre località e viceversa. Itinerario, data e disponibilità da concordare.",
+        },
+        chauffeur: {
+          title: "Autista a disposizione | Eurovip 2000",
+          description:
+            "Richiedi informazioni per un servizio NCC con autista a disposizione, in base al tuo itinerario e ai tuoi impegni.",
+        },
+      },
+    },
+    homeIntro:
+      "Servizi di noleggio con conducente per privati e aziende, con itinerari da concordare in Italia.",
+    homeAboutLink: "Scopri Eurovip 2000",
+    homeServicesTitle: "Un servizio per|ogni itinerario.",
+    homeTransfersTitle: "Parti da Roma?",
+    homeTransfersIntro:
+      "Scegli una tratta per scoprire i dettagli e inviare la tua richiesta su WhatsApp.",
+    homeAllServices: "Tutti i servizi",
+    homeAboutTitle: "Un servizio attento|alle tue esigenze.",
+    homeQuoteLink: "Parliamo del tuo viaggio",
+    aboutPageEyebrow: "Chi siamo · Esperienza",
+    aboutPageTitle: "Un viaggio ben organizzato|comincia dall'ascolto.",
+    aboutPageIntro:
+      "Eurovip 2000 è una società di noleggio con conducente. Il servizio è rivolto a chi desidera organizzare spostamenti privati o di lavoro in Italia, definendo il percorso insieme all'azienda.",
+    transferDetails: {
+      fiumicino: {
+        eyebrow: "Transfer aeroporto · FCO",
+        title: "Da e per l'aeroporto|di Fiumicino.",
+        description:
+          "Organizza il tuo transfer NCC tra Roma, l'aeroporto Leonardo da Vinci e la destinazione che hai in programma.",
+        paragraphs: [
+          "Comunicaci se il servizio è in partenza dall'aeroporto o diretto a Fiumicino. Indica il terminal o l'indirizzo, la destinazione, la data e l'orario: sono le informazioni utili per valutare il percorso.",
+          "Se il viaggio è collegato a un volo, puoi aggiungere i dettagli che ritieni utili nella richiesta. Orari, modalità di incontro, disponibilità e ogni altro aspetto operativo vanno concordati direttamente.",
+        ],
+        planningTitle: "Dettagli utili per la richiesta",
+        planningItems: [
+          "Data e orario previsti",
+          "Indirizzo di partenza e destinazione",
+          "Numero di passeggeri e bagagli",
+        ],
+      },
+      ciampino: {
+        eyebrow: "Transfer aeroporto · CIA",
+        title: "Da e per l'aeroporto|di Ciampino.",
+        description:
+          "Richiedi un transfer NCC tra Roma, l'aeroporto di Ciampino e la destinazione del tuo viaggio.",
+        paragraphs: [
+          "Per valutare il trasferimento, indica se parti da Ciampino o se devi raggiungere l'aeroporto. Aggiungi data, orario, indirizzi e numero di passeggeri.",
+          "Puoi specificare eventuali esigenze per bagagli o tappe intermedie nel messaggio. Percorso, disponibilità e dettagli del servizio si concordano prima della conferma.",
+        ],
+        planningTitle: "Cosa indicarci",
+        planningItems: [
+          "Data e orario del trasferimento",
+          "Punto di partenza e destinazione",
+          "Passeggeri e bagagli",
+        ],
+      },
+      civitavecchia: {
+        eyebrow: "Transfer porto · Civitavecchia",
+        title: "Da e per il porto|di Civitavecchia.",
+        description:
+          "Pianifica un transfer NCC tra il porto di Civitavecchia, Roma e la destinazione del tuo itinerario.",
+        paragraphs: [
+          "Indica se il transfer parte dal porto o è diretto ai terminal. Per collegare il porto con Roma o con un'altra località, descrivi il percorso e specifica data e orario.",
+          "Se viaggi in occasione di una crociera, puoi aggiungere nel messaggio le informazioni sul terminal e gli orari utili. I dettagli di presa in carico e la disponibilità vanno verificati direttamente.",
+        ],
+        planningTitle: "Organizza il collegamento",
+        planningItems: [
+          "Terminal o punto d'incontro",
+          "Destinazione e orario indicativo",
+          "Numero di passeggeri e bagagli",
+        ],
+      },
+      rome: {
+        eyebrow: "Transfer privato · Roma",
+        title: "I tuoi spostamenti|a Roma.",
+        description:
+          "Richiedi un servizio NCC per spostarti tra indirizzi, appuntamenti e destinazioni all'interno di Roma.",
+        paragraphs: [
+          "Per un trasferimento in città, indicaci indirizzo di partenza, destinazione e orario. Se hai più appuntamenti o tappe, puoi descriverli nella richiesta.",
+          "Il percorso, la durata prevista e la disponibilità sono da valutare sulla base delle informazioni fornite e da concordare prima del servizio.",
+        ],
+        planningTitle: "Prepara il tuo itinerario",
+        planningItems: [
+          "Indirizzi di partenza e arrivo",
+          "Data e orario",
+          "Eventuali tappe e tempi di attesa richiesti",
+        ],
+      },
+      "beyond-rome": {
+        eyebrow: "Viaggi fuori Roma",
+        title: "Da Roma verso|la tua destinazione.",
+        description:
+          "Valuta un viaggio NCC da Roma verso un'altra località italiana o verso Roma da una città diversa.",
+        paragraphs: [
+          "I viaggi fuori Roma si organizzano indicando la città o l'indirizzo di partenza, la destinazione e la data. Se il trasferimento è di andata e ritorno, specificalo nella richiesta.",
+          "Distanza, orari e disponibilità variano in base all'itinerario. Fornisci le informazioni principali così sarà possibile valutare la richiesta e concordare i dettagli.",
+        ],
+        planningTitle: "Informazioni per il viaggio",
+        planningItems: [
+          "Località di partenza e arrivo",
+          "Data, orario e richiesta di ritorno",
+          "Passeggeri ed eventuali tappe",
+        ],
+      },
+      chauffeur: {
+        eyebrow: "Servizio dedicato",
+        title: "Un autista|a disposizione.",
+        description:
+          "Raccontaci i tuoi impegni e le fasce orarie: valuteremo la richiesta per un servizio con autista a disposizione.",
+        paragraphs: [
+          "Puoi richiedere informazioni per un servizio dedicato a più appuntamenti o spostamenti nell'arco della giornata. Indica la data, la località, la durata prevista e le tappe che conosci già.",
+          "Organizzazione, durata e disponibilità si definiscono in base alle esigenze comunicate e vanno concordate prima di confermare il servizio.",
+        ],
+        planningTitle: "Come descrivere il servizio",
+        planningItems: [
+          "Data, località e orari indicativi",
+          "Durata prevista",
+          "Appuntamenti o tappe già pianificati",
+        ],
+      },
     },
     languageLabel: "Lingua",
     currentLanguage: "IT",
     switchLanguage: "Switch to English",
     quoteCta: "Richiedi un preventivo",
+    contactsEyebrow: "Contatti · Eurovip 2000",
+    contactsTitle: "Parliamo|del tuo prossimo viaggio.",
+    contactsIntro:
+      "Per informazioni su un servizio NCC o per preparare un preventivo, contattaci per telefono o WhatsApp. Operiamo in tutta Italia; percorso e disponibilità sono da concordare.",
+    contactPhoneLabel: "Telefono",
+    contactWhatsAppLabel: "WhatsApp",
+    contactEmailLabel: "Email",
+    contactEmailPending: "Indirizzo ufficiale da inserire",
+    contactDetailsPending:
+      "Email da confermare prima della pubblicazione del sito.",
+    contactPhoneAction: "Chiama Eurovip 2000",
+    contactWhatsAppAction: "Apri una chat con Eurovip 2000",
+    contactCoverageLabel: "Dove operiamo",
+    contactCoverage: "Servizi NCC in tutta Italia",
+    contactQuoteCta: "Richiedi un preventivo gratuito",
     heroAlt: "Automobile scura in viaggio, immagine illustrativa",
     heroEyebrow: "Noleggio con conducente",
     nationalTag: "In tutta Italia",
@@ -112,38 +304,45 @@ const translations = {
     transferIntro:
       "Seleziona il servizio che ti interessa: si aprirà WhatsApp con un messaggio già pronto, che potrai completare e inviare.",
     transferCta: "Richiedi su WhatsApp",
+    transferDetailsCta: "Scopri il servizio",
     transfers: [
       {
+        id: "fiumicino",
         title: "Aeroporto di Fiumicino",
         description: "Transfer da o per l'aeroporto Leonardo da Vinci (FCO).",
         message:
           "Buongiorno, vorrei un preventivo per un transfer da/per l'aeroporto di Fiumicino. Data e orario: [da indicare]. Partenza/destinazione: [da indicare]. Passeggeri: [da indicare].",
       },
       {
+        id: "ciampino",
         title: "Aeroporto di Ciampino",
         description: "Transfer da o per l'aeroporto di Ciampino (CIA).",
         message:
           "Buongiorno, vorrei un preventivo per un transfer da/per l'aeroporto di Ciampino. Data e orario: [da indicare]. Partenza/destinazione: [da indicare]. Passeggeri: [da indicare].",
       },
       {
+        id: "civitavecchia",
         title: "Porto di Civitavecchia",
         description: "Collegamenti da o per il porto e i terminal crociere.",
         message:
           "Buongiorno, vorrei un preventivo per un transfer da/per il porto di Civitavecchia. Data e orario: [da indicare]. Partenza/destinazione: [da indicare]. Passeggeri: [da indicare].",
       },
       {
+        id: "rome",
         title: "Roma città",
         description: "Spostamenti e transfer all'interno di Roma.",
         message:
           "Buongiorno, vorrei un preventivo per un transfer a Roma. Data e orario: [da indicare]. Indirizzo di partenza: [da indicare]. Destinazione: [da indicare]. Passeggeri: [da indicare].",
       },
       {
+        id: "beyond-rome",
         title: "Roma e fuori città",
         description: "Viaggi da Roma verso altre località e viceversa.",
         message:
           "Buongiorno, vorrei un preventivo per un transfer da Roma verso un'altra località (o viceversa). Data e orario: [da indicare]. Partenza/destinazione: [da indicare]. Passeggeri: [da indicare].",
       },
       {
+        id: "chauffeur",
         title: "Autista a disposizione",
         description: "Un servizio da organizzare in base ai tuoi impegni.",
         message:
@@ -252,11 +451,203 @@ const translations = {
       fleet: "Our fleet",
       services: "Services",
       faq: "FAQ",
+      contacts: "Contact",
+    },
+    pageMeta: {
+      about: {
+        title: "About us | Eurovip 2000",
+        description:
+          "Meet Eurovip 2000, a private chauffeur service for business and leisure travel in Italy.",
+      },
+      fleet: {
+        title: "Chauffeur fleet | Eurovip 2000",
+        description:
+          "Explore indicative vehicle categories for Eurovip 2000 chauffeur services. Capacity and availability must be confirmed.",
+      },
+      services: {
+        title: "Chauffeur services in Italy | Eurovip 2000",
+        description:
+          "Airport transfers, business journeys, Rome transfers and chauffeur-at-disposal services. Explore Eurovip 2000.",
+      },
+      contacts: {
+        title: "Contact Eurovip 2000 | Chauffeur service",
+        description:
+          "Contact Eurovip 2000 for chauffeur service information or to request a free quote for travel in Italy.",
+      },
+      quote: {
+        title: "Request a chauffeur quote | Eurovip 2000",
+        description:
+          "Tell us about your itinerary and request a free quote for a private chauffeur service.",
+      },
+      faq: {
+        title: "Frequently asked questions | Eurovip 2000",
+        description:
+          "Answers to common questions about Eurovip 2000 chauffeur services, quote requests and travel across Italy.",
+      },
+      transfers: {
+        fiumicino: {
+          title: "Fiumicino Airport transfers | Eurovip 2000",
+          description:
+            "Enquire about a private chauffeur transfer to or from Rome Fiumicino Airport. Itinerary and details to be agreed.",
+        },
+        ciampino: {
+          title: "Ciampino Airport transfers | Eurovip 2000",
+          description:
+            "Enquire about a private chauffeur transfer to or from Rome Ciampino Airport. Itinerary and details to be agreed.",
+        },
+        civitavecchia: {
+          title: "Civitavecchia Port transfers | Eurovip 2000",
+          description:
+            "Enquire about a private chauffeur transfer to or from Civitavecchia Port, with route details to be agreed.",
+        },
+        rome: {
+          title: "Private transfers in Rome | Eurovip 2000",
+          description:
+            "Request a chauffeur transfer within Rome. Share your addresses, date and time to discuss the service.",
+        },
+        "beyond-rome": {
+          title: "Private transfers from Rome | Eurovip 2000",
+          description:
+            "Chauffeur journeys from Rome to other destinations and vice versa. Route, date and availability to be agreed.",
+        },
+        chauffeur: {
+          title: "Chauffeur at your disposal | Eurovip 2000",
+          description:
+            "Enquire about a chauffeur-at-disposal service arranged around your itinerary and schedule.",
+        },
+      },
+    },
+    homeIntro:
+      "Private chauffeur services for individuals and businesses, with journeys arranged across Italy.",
+    homeAboutLink: "Discover Eurovip 2000",
+    homeServicesTitle: "A service for|every journey.",
+    homeTransfersTitle: "Travelling to or from Rome?",
+    homeTransfersIntro:
+      "Choose a route to explore the details and send your enquiry on WhatsApp.",
+    homeAllServices: "Explore all services",
+    homeAboutTitle: "A service shaped|around your needs.",
+    homeQuoteLink: "Tell us about your journey",
+    aboutPageEyebrow: "About us · Experience",
+    aboutPageTitle: "A well-planned journey|starts with listening.",
+    aboutPageIntro:
+      "Eurovip 2000 is a private chauffeur service for people planning business or leisure travel in Italy, with each itinerary discussed around their needs.",
+    transferDetails: {
+      fiumicino: {
+        eyebrow: "Airport transfer · FCO",
+        title: "To and from|Fiumicino Airport.",
+        description:
+          "Plan a private chauffeur transfer between Rome, Leonardo da Vinci Airport and your chosen destination.",
+        paragraphs: [
+          "Let us know whether your journey starts at the airport or is heading to Fiumicino. Include the terminal or address, destination, date and time so we can assess the route.",
+          "If your journey is connected to a flight, you can add any useful details to your enquiry. Timings, meeting arrangements, availability and other operational details must be agreed directly.",
+        ],
+        planningTitle: "Useful details for your enquiry",
+        planningItems: [
+          "Travel date and time",
+          "Pick-up address and destination",
+          "Number of passengers and bags",
+        ],
+      },
+      ciampino: {
+        eyebrow: "Airport transfer · CIA",
+        title: "To and from|Ciampino Airport.",
+        description:
+          "Request a private chauffeur transfer between Rome, Ciampino Airport and your destination.",
+        paragraphs: [
+          "To discuss your transfer, let us know whether you are travelling from Ciampino or to the airport. Include the date, time, addresses and number of passengers.",
+          "You can mention luggage or any stops in your message. The route, availability and service details are agreed before confirmation.",
+        ],
+        planningTitle: "What to include",
+        planningItems: [
+          "Transfer date and time",
+          "Pick-up point and destination",
+          "Passengers and luggage",
+        ],
+      },
+      civitavecchia: {
+        eyebrow: "Port transfer · Civitavecchia",
+        title: "To and from|Civitavecchia Port.",
+        description:
+          "Plan a private chauffeur transfer between Civitavecchia Port, Rome and your chosen destination.",
+        paragraphs: [
+          "Let us know whether your transfer starts at the port or is heading to the terminals. For a connection to Rome or another destination, describe your route and include the date and time.",
+          "If you are travelling for a cruise, you can add terminal and timing information to your message. Pick-up arrangements and availability must be checked directly.",
+        ],
+        planningTitle: "Plan your connection",
+        planningItems: [
+          "Terminal or meeting point",
+          "Destination and approximate time",
+          "Number of passengers and bags",
+        ],
+      },
+      rome: {
+        eyebrow: "Private transfer · Rome",
+        title: "Getting around|Rome.",
+        description:
+          "Enquire about a chauffeur transfer between addresses, appointments and destinations within Rome.",
+        paragraphs: [
+          "For a city transfer, share your pick-up address, destination and preferred time. If you have several appointments or stops, include them in your enquiry.",
+          "The route, estimated duration and availability are assessed from the information provided and agreed before the service.",
+        ],
+        planningTitle: "Plan your itinerary",
+        planningItems: [
+          "Pick-up and drop-off addresses",
+          "Date and time",
+          "Any stops or requested waiting time",
+        ],
+      },
+      "beyond-rome": {
+        eyebrow: "Journeys beyond Rome",
+        title: "From Rome to|your destination.",
+        description:
+          "Enquire about a private chauffeur journey from Rome to another Italian destination, or to Rome from elsewhere.",
+        paragraphs: [
+          "For journeys beyond Rome, share your starting city or address, destination and travel date. If you need a return journey, mention it in your enquiry.",
+          "Distance, timings and availability depend on the itinerary. Provide the main details so your request can be assessed and the arrangements agreed.",
+        ],
+        planningTitle: "Journey details",
+        planningItems: [
+          "Starting point and destination",
+          "Date, time and return requirements",
+          "Passengers and any stops",
+        ],
+      },
+      chauffeur: {
+        eyebrow: "Dedicated service",
+        title: "A chauffeur|at your disposal.",
+        description:
+          "Tell us about your schedule and timings so we can discuss a chauffeur service arranged around your plans.",
+        paragraphs: [
+          "You can enquire about a dedicated service for several appointments or journeys during the day. Include the date, location, estimated duration and any stops you already know.",
+          "Organisation, duration and availability depend on the requirements shared and must be agreed before confirming the service.",
+        ],
+        planningTitle: "How to describe your plans",
+        planningItems: [
+          "Date, location and approximate times",
+          "Expected duration",
+          "Appointments or planned stops",
+        ],
+      },
     },
     languageLabel: "Language",
     currentLanguage: "EN",
     switchLanguage: "Passa all'italiano",
     quoteCta: "Request a quote",
+    contactsEyebrow: "Contact · Eurovip 2000",
+    contactsTitle: "Let’s talk|about your next journey.",
+    contactsIntro:
+      "For information about a chauffeur service or to plan a quote, contact us by phone or WhatsApp. We operate across Italy; routes and availability are agreed individually.",
+    contactPhoneLabel: "Phone",
+    contactWhatsAppLabel: "WhatsApp",
+    contactEmailLabel: "Email",
+    contactEmailPending: "Official address to be added",
+    contactDetailsPending:
+      "Please confirm the email address before publishing the website.",
+    contactPhoneAction: "Call Eurovip 2000",
+    contactWhatsAppAction: "Open a chat with Eurovip 2000",
+    contactCoverageLabel: "Service area",
+    contactCoverage: "Chauffeur services across Italy",
+    contactQuoteCta: "Request a free quote",
     heroAlt: "Dark car on the road, illustrative image",
     heroEyebrow: "Private chauffeur service",
     nationalTag: "Across Italy",
@@ -342,38 +733,45 @@ const translations = {
     transferIntro:
       "Choose the service you need. WhatsApp will open with a message ready for you to complete and send.",
     transferCta: "Enquire on WhatsApp",
+    transferDetailsCta: "Explore this service",
     transfers: [
       {
+        id: "fiumicino",
         title: "Fiumicino Airport",
         description: "Transfers to or from Leonardo da Vinci Airport (FCO).",
         message:
           "Hello, I would like a quote for a transfer to/from Fiumicino Airport. Date and time: [please add]. Pick-up/drop-off: [please add]. Passengers: [please add].",
       },
       {
+        id: "ciampino",
         title: "Ciampino Airport",
         description: "Transfers to or from Ciampino Airport (CIA).",
         message:
           "Hello, I would like a quote for a transfer to/from Ciampino Airport. Date and time: [please add]. Pick-up/drop-off: [please add]. Passengers: [please add].",
       },
       {
+        id: "civitavecchia",
         title: "Civitavecchia Port",
         description: "Connections to or from the port and cruise terminals.",
         message:
           "Hello, I would like a quote for a transfer to/from Civitavecchia Port. Date and time: [please add]. Pick-up/drop-off: [please add]. Passengers: [please add].",
       },
       {
+        id: "rome",
         title: "Rome city transfers",
         description: "Transfers and journeys within Rome.",
         message:
           "Hello, I would like a quote for a transfer in Rome. Date and time: [please add]. Pick-up address: [please add]. Destination: [please add]. Passengers: [please add].",
       },
       {
+        id: "beyond-rome",
         title: "Rome and beyond",
         description: "Journeys from Rome to other destinations, and vice versa.",
         message:
           "Hello, I would like a quote for a transfer from Rome to another destination (or vice versa). Date and time: [please add]. Pick-up/drop-off: [please add]. Passengers: [please add].",
       },
       {
+        id: "chauffeur",
         title: "Chauffeur at your disposal",
         description: "A service arranged around your schedule.",
         message:

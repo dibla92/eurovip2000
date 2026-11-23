@@ -13,6 +13,7 @@ type HeaderCopy = {
     fleet: string;
     services: string;
     faq: string;
+    contacts: string;
   };
   languageLabel: string;
   quoteCta: string;
@@ -21,9 +22,22 @@ type HeaderCopy = {
 export default function SiteHeader({
   locale,
   copy,
+  paths,
 }: {
   locale: Locale;
   copy: HeaderCopy;
+  paths: {
+    home: string;
+    about: string;
+    experience: string;
+    fleet: string;
+    services: string;
+    faq: string;
+    contacts: string;
+    quote: string;
+    italian: string;
+    english: string;
+  };
 }) {
   const headerRef = useRef<HTMLElement>(null);
   const [hidden, setHidden] = useState(false);
@@ -58,7 +72,7 @@ export default function SiteHeader({
       ref={headerRef}
     >
       <div className="header-inner">
-        <a className="brand" href="#inizio" aria-label={copy.homeLabel}>
+        <a className="brand" href={paths.home} aria-label={copy.homeLabel}>
           <span className="brand-mark" aria-hidden="true">
             E
           </span>
@@ -67,16 +81,17 @@ export default function SiteHeader({
           </span>
         </a>
         <nav className="main-nav" aria-label={copy.navLabel}>
-          <a href="#chi-siamo">{copy.nav.about}</a>
-          <a href="#esperienza">{copy.nav.experience}</a>
-          <a href="#flotta">{copy.nav.fleet}</a>
-          <a href="#servizi">{copy.nav.services}</a>
-          <a href="#faq">{copy.nav.faq}</a>
+          <a href={paths.about}>{copy.nav.about}</a>
+          <a href={paths.experience}>{copy.nav.experience}</a>
+          <a href={paths.fleet}>{copy.nav.fleet}</a>
+          <a href={paths.services}>{copy.nav.services}</a>
+          <a href={paths.faq}>{copy.nav.faq}</a>
+          <a href={paths.contacts}>{copy.nav.contacts}</a>
         </nav>
         <div className="header-actions">
           <nav className="language-switch" aria-label={copy.languageLabel}>
             <Link
-              href="/it#inizio"
+              href={paths.italian}
               lang="it"
               aria-current={locale === "it" ? "page" : undefined}
               aria-label="Italiano"
@@ -84,7 +99,7 @@ export default function SiteHeader({
               <span aria-hidden="true">🇮🇹</span> IT
             </Link>
             <Link
-              href="/en#inizio"
+              href={paths.english}
               lang="en"
               aria-current={locale === "en" ? "page" : undefined}
               aria-label="English"
@@ -92,7 +107,7 @@ export default function SiteHeader({
               <span aria-hidden="true">🇬🇧</span> EN
             </Link>
           </nav>
-          <a className="header-cta" href="#preventivo">
+          <a className="header-cta" href={paths.quote}>
             {copy.quoteCta} <span aria-hidden="true">↗</span>
           </a>
         </div>
