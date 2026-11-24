@@ -932,16 +932,55 @@ textarea:focus-visible {
 }
 
 .home-services-section {
-  padding-block: 96px;
+  padding-block: 76px;
 }
 
 .home-services-section .section-heading {
-  margin-bottom: 42px;
+  margin-bottom: 30px;
 }
 
 .home-services-section .section-heading h2 {
-  margin-top: 16px;
-  font-size: clamp(38px, 4.2vw, 58px);
+  margin-top: 12px;
+  font-size: clamp(36px, 3.8vw, 48px);
+}
+
+.home-services-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  list-style: none;
+}
+
+.home-service-item {
+  display: flex;
+  min-width: 0;
+  padding: 17px 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  border-left: 1px solid var(--line);
+}
+
+.home-service-item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.home-service-number {
+  color: var(--olive);
+  font-family: var(--serif);
+  font-size: 13px;
+}
+
+.home-service-item h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.25;
 }
 
 .transfers-section {
@@ -1680,6 +1719,23 @@ a.contact-card:hover {
     grid-template-columns: 1fr 1fr;
   }
 
+  .home-services-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-service-item:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .home-service-item:nth-child(even) {
+    padding-right: 0;
+  }
+
+  .home-service-item:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
   .transfer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1924,17 +1980,26 @@ a.contact-card:hover {
   }
 
   .home-services-section {
-    padding-block: 62px;
+    padding-block: 50px;
   }
 
   .home-services-section .section-heading {
-    margin-bottom: 27px;
+    margin-bottom: 22px;
     gap: 12px;
   }
 
   .home-services-section .section-heading h2 {
-    margin-top: 14px;
-    font-size: clamp(36px, 9vw, 46px);
+    margin-top: 12px;
+    font-size: clamp(32px, 8vw, 40px);
+  }
+
+  .home-service-item {
+    padding-block: 15px;
+    gap: 10px;
+  }
+
+  .home-service-item h3 {
+    font-size: 17px;
   }
 
   .fleet-grid {

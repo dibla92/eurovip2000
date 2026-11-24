@@ -126,20 +126,16 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
                 {t.homeAllServices} <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <div className="services-grid">
+            <ul className="home-services-list">
               {t.services.map((service, index) => (
-                <a className="service-card" href={servicesPath} key={service.title}>
-                  <span className="service-number">
+                <li className="home-service-item" key={service.title}>
+                  <span className="home-service-number">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="service-arrow" aria-hidden="true">
-                    ↗
-                  </span>
                   <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
